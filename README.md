@@ -1,5 +1,5 @@
 # Project Name
-Project description
+Initiate Phone Calls through OpCon via Twilio
 
 # Disclaimer
 No Support and No Warranty are provided by SMA Technologies for this project and related material. The use of this project's files is on your own risk.
@@ -7,10 +7,10 @@ No Support and No Warranty are provided by SMA Technologies for this project and
 SMA Technologies assumes no liability for damage caused by the usage of any of the files offered here via this Github repository.
 
 # Prerequisites
-
+A Twilio account is required for this script to work. You need to record your Twilio Account SID, Authentication Token, and Twilio Number and provide them to the script.
 
 # Instructions
-
+The TwilioConfiguration.docx has more information on how to configure OpCon to run this powershell script.
 
 # License
 Copyright 2019 SMA Technologies
