@@ -115,6 +115,9 @@ An OpCon Schedule will be built to manage the phone alerts. There will be at min
 	* Select the appropriate embedded script
 	* Select the PowerShell runner
 	* Enter the following Arguments:
+
+![JobCommand](/img/JobCommandLine.png)
+
 ```
 -TwilioAccountSID [[TwilioAccountSID]] -TwilioAuthToken [[TwilioAuthToken]] -TwilioNumber "[[TwilioNumber]]" -PhoneNumber "[[OnCallPrimary]]" -Message "Remember, OpCon can do anything if you put your mind to it."
 ```
