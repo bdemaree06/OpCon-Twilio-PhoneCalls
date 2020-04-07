@@ -1,3 +1,4 @@
+<link id="linkstyle" rel='stylesheet' href='style.css'/>
 OpCon - Phone Call Notifications via Twilio
 ===========
 
@@ -9,19 +10,13 @@ After creating a Twilio account, you can log into your Twilio console.  The Acco
 
 ![Twilio Account](/img/TwilioAccount.png)
 
-<link id="linkstyle" rel='stylesheet' href='style.css'/>
-
 Record the Account SID and Auth Token. They will both be used by the OpCon Job initiating the call.
 
 Next, click on the number sign (#) to see the Authorized phone number(s):
 
 ![Twilio Account](/img/TwilioAccounts2.png)
 
-<link id="linkstyle" rel='stylesheet' href='style.css'/>
-
 ![Twilio Account](/img/TwilioNumbers.png)
-
-<link id="linkstyle" rel='stylesheet' href='style.css'/>
 
 Record this telephone number.  It is the authorized telephone number for this account and is needed for the SMATwilioConnector configuration. 
 
