@@ -9,20 +9,21 @@ This solution will allow you to send phone call notifications in place of or in 
 
 ## Twilio Configuration Values <a name="TwilioConfiguration"></a>
 
-After creating a Twilio account, you can log into your Twilio console.  The Account SID and Authorization token are shown on the home page.
+After creating a Twilio account, log into your Twilio console.  There are three Twilio settings needed for OpCon to initiate a call via Twillio. 
+
+* Account SID
+* Authentication Token
+* Autherized Phone Number
 
 ![Twilio Account](/img/TwilioAccount.png)
 
-Record the Account SID and Auth Token. They will both be used by the OpCon Job initiating the call.
-
-Next, click on the number sign (#) to see the Authorized phone number(s):
+The Account SID and Authorization token are shown on the home page. Click on the number sign (#) to see the Authorized phone number(s):
 
 ![Twilio Menu](/img/TwilioAccount2.png)
 ![TwilioPhone](/img/TwilioNumber.png)
 
-Record this telephone number.  It is the authorized telephone number for this account and is needed for the SMATwilioConnector configuration. 
-
 ## Twilio Powershell Script <a name="TwilioScript"></a>
+The examples in this document assume that the script below is placed in OpCon's embedded scripts feature using the powershell script type.
 
 ```
 <#
@@ -92,16 +93,20 @@ There are five command line parameters requires for this script.
 	* This is the message that will be delieverd during the phone call.
 
 ## OpCon Job Setup <a name="JobSetup"></a>
-These notifications will managed by an OpCon Schedule with on-demand multi-instance Jobs which will trigger the phone calls. Notification Manager will be setup to "Send OpCon/xps Events" adding the on-demand Jobs to the Schedule.
+These notifications will be managed by an OpCon Schedule with on-demand multi-instance Jobs which will trigger the phone calls. Notification Manager will be setup to "Send OpCon/xps Events" adding the on-demand Jobs to the Schedule.
 
-#### OnCall Alerts Schedule Configuration <a name="OnCallJobs"></a>
-An OpCon Schedule will be built to manage the phone alerts. There will be at minimum two Jobs in this Schedule (additional configuration is required to set up escalating calls).
+### OnCall Alerts Schedule Configuration <a name="OnCallJobs"></a>
+An OpCon Schedule will be built to manage the phone alerts. There will be a minimum two Jobs in this Schedule (additional configuration is required to set up escalating calls).
+
+#### Schedule Details <a name="ScheduleDetails"></a>
 * Schedule Name "OnCall Alerts"
 	* Start Time 00:00
 	* Mark all days in the "Workays per Week"
 	* Uncheck Use Master Holiday
 	* Auto Build 0 days in advance for 2 days.
 	* Auto Delete - use your company's standards.
+
+#### Job Details <a name="JobDetails"></a>
 * Job Name "Keep Schedule Open"
 	* Null Job Type
 	* Frequency - select a Frequency which allows the Job to run every day of the year.
@@ -126,4 +131,10 @@ An OpCon Schedule will be built to manage the phone alerts. There will be at min
 	* Run Intervale (these settings should be customized based on your preference)
 		* Minutes from Start to Start 15
 		* Number of Runs 5
+
+#### Notification Manager Details <a name="NotificationDetails"></a>
+OpCon does not come with a phone call option. For this solution to work you need to use the "Send OpCon/xps Event" notification type adding the "Call Level One" Job to the "OnCall Alerts" Schedule. 
+
+![Notification](/img/NotificationManager.png)
+
 
