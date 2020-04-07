@@ -1,7 +1,7 @@
 
 <link id="linkstyle" rel='stylesheet' href='style.css'/>
 
-# OpCon - Phone Call Notifications via Twilio
+OpCon - Phone Call Notifications via Twilio
 ===========
 
 This solution will allow you to send phone call notifications in place of or in addition to OpCon's normal Notification Manager notifications.
