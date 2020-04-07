@@ -17,8 +17,7 @@ Record the Account SID and Auth Token. They will both be used by the OpCon Job i
 
 Next, click on the number sign (#) to see the Authorized phone number(s):
 
-![Twilio Menu](/img/TwilioAccounts2.png)
-![Twilio Numbers](/img/TwilioNumbers.png)
+![Twilio Menu](/img/TwilioAccount2.png)
 
 Record this telephone number.  It is the authorized telephone number for this account and is needed for the SMATwilioConnector configuration. 
 
