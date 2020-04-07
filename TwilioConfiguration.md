@@ -1,15 +1,19 @@
 
 <link id="linkstyle" rel='stylesheet' href='style.css'/>
 
-
-OpCon - Phone Call Notifications via Twilio
+# OpCon - Phone Call Notifications via Twilio
 ===========
 
 This solution will allow you to send phone call notifications in place of or in addition to OpCon's normal Notification Manager notifications.
 
-## Twilio Configuration Values <a name="TwilioConfiguration"></a>
+# Disclaimer
+No Support and No Warranty are provided by SMA Technologies for this project and related material. The use of this project's files is on your own risk.
 
-After creating a Twilio account, log into your Twilio console.  There are three Twilio settings needed for OpCon to initiate a call via Twillio. 
+SMA Technologies assumes no liability for damage caused by the usage of any of the files offered here via this Github repository.
+
+# Prerequisite - Collect Twilio Information
+
+You must create or reference an existing Twilio account. Log into your Twilio console to collected the following three parameters. 
 
 * Account SID
 * Authentication Token
@@ -22,8 +26,11 @@ The Account SID and Authorization token are shown on the home page. Click on the
 ![Twilio Menu](/img/TwilioAccount2.png)
 ![TwilioPhone](/img/TwilioNumber.png)
 
+# Instructions
+After you have recorded the necessary Twilio information, you can start configuring script below.
+
 ## Twilio Powershell Script <a name="TwilioScript"></a>
-The examples in this document assume that the script below is placed in OpCon's embedded scripts feature using the powershell script type.
+I would recommend downloading and testing the script below before adding it to OpCon. The examples in this document assume that you are beyond the initial tests and have placed the script in OpCon's embedded scripts feature using the powershell script type. 
 
 ```
 <#
@@ -121,11 +128,12 @@ An OpCon Schedule will be built to manage the phone alerts. There will be a mini
 	* Select the PowerShell runner
 	* Enter the following Arguments:
 
-![JobCommand](/img/JobCommandLine.png)
-
 ```
 -TwilioAccountSID [[TwilioAccountSID]] -TwilioAuthToken [[TwilioAuthToken]] -TwilioNumber "[[TwilioNumber]]" -PhoneNumber "[[OnCallPrimary]]" -Message "Remember, OpCon can do anything if you put your mind to it."
 ```
+
+![JobCommand](/img/JobCommandLine.png)
+
 *
 	* Frequency - an OnRequest frequency which will only be built when called by an event
 	* Run Intervale (these settings should be customized based on your preference)
@@ -133,8 +141,26 @@ An OpCon Schedule will be built to manage the phone alerts. There will be a mini
 		* Number of Runs 5
 
 #### Notification Manager Details <a name="NotificationDetails"></a>
-OpCon does not come with a phone call option. For this solution to work you need to use the "Send OpCon/xps Event" notification type adding the "Call Level One" Job to the "OnCall Alerts" Schedule. 
+OpCon's Notification Manager does not come with a phone call option. For this solution to work you need to use the "Send OpCon/xps Event" notification type adding the "Call Level One" Job to the "OnCall Alerts" Schedule. 
 
 ![Notification](/img/NotificationManager.png)
 
+# License
+Copyright 2019 SMA Technologies
 
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at [apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+# Contributing
+We love contributions, please read our [Contribution Guide](CONTRIBUTING.md) to get started!
+
+# Code of Conduct
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code-of-conduct.md)
+SMA Technologies has adopted the [Contributor Covenant](CODE_OF_CONDUCT.md) as its Code of Conduct, and we expect project participants to adhere to it. Please read the [full text](CODE_OF_CONDUCT.md) so that you can understand what actions will and will not be tolerated.
