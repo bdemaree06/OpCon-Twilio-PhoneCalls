@@ -125,6 +125,7 @@ An OpCon Schedule will be built to manage the phone alerts. There will be at min
 ```
 -TwilioAccountSID [[TwilioAccountSID]] -TwilioAuthToken [[TwilioAuthToken]] -TwilioNumber "[[TwilioNumber]]" -PhoneNumber "[[OnCallPrimary]]" -Message "Remember, OpCon can do anything if you put your mind to it."
 ```
+*
 	* Frequency - an OnRequest frequency which will only be built when called by an event
 	* Run Intervale (these settings should be customized based on your preference)
 		* Minutes from Start to Start 15
