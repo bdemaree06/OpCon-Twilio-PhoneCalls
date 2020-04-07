@@ -1,7 +1,3 @@
-![SMA Technologies Logo](/OpCon-Twilio-PhoneCalls/img/SMATechnologies.png)
-
-<link id="linkstyle" rel='stylesheet' href='style.css'/>
-
 OpCon - Phone Call Notifications via Twilio
 ===========
 
@@ -11,7 +7,7 @@ This solution will allow you to send phone call notifications in place of or in 
 
 After creating a Twilio account, you can log into your Twilio console.  The Account SID and Authorization token are shown on the home page.
 
-![Twilio Account](/OpCon-Twilio-PhoneCalls/img/TwilioAccount.png)
+![Twilio Account](/img/TwilioAccount.png)
 
 <link id="linkstyle" rel='stylesheet' href='style.css'/>
 
@@ -19,11 +15,11 @@ Record the Account SID and Auth Token. They will both be used by the OpCon Job i
 
 Next, click on the number sign (#) to see the Authorized phone number(s):
 
-![Twilio Account](/OpCon-Twilio-PhoneCalls/img/TwilioAccounts2.png)
+![Twilio Account](/img/TwilioAccounts2.png)
 
 <link id="linkstyle" rel='stylesheet' href='style.css'/>
 
-![Twilio Account](/OpCon-Twilio-PhoneCalls/img/TwilioNumbers.png)
+![Twilio Account](/img/TwilioNumbers.png)
 
 <link id="linkstyle" rel='stylesheet' href='style.css'/>
 
